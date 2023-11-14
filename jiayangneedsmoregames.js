@@ -1,0 +1,1 @@
+(r=function(){g=300,a=new Date,c=new Date(a.getFullYear(),11,31),d=Math.ceil((c-a)/864e5),console.log("You must add "+(g-document.getElementsByClassName("card animals").length)/d+" games per day to reach your goal of "+g+" games")})();
