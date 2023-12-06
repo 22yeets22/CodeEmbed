@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $.ajax({ url: prompt('Enter the URL:'), success: function(data) { document.getElementById('output').innerText = data; } });
+  </script>
+  </head>
+  <body>
+    <p id="output">Loading...</p>
+  </body>
+</html>
