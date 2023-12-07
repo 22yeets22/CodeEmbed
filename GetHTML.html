@@ -4,21 +4,22 @@
   <meta charset="UTF-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
-  function urlRequest(urlInput) {
+  	function urlRequest(urlInput) {
       $.ajax({
         url: (function () {
           $("#output").text("Loading...");
+          $("#startbutt").hide();
           return urlInput;
         })(),
         success: function (result) {
           $("#output").text(result);
         }
       });
-	}
+    }
   </script>
   </head>
   <body>
-  	<button onclick="urlRequest(prompt('test'));">Test</button>
+  	<button id="startbutt" onclick="urlRequest(prompt('test'));">Test</button>
     <p id="output"></p>
   </body>
 </html>
