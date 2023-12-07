@@ -5,12 +5,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     $.ajax({
-      url: prompt('Enter the URL:'),
-      success: function(data) { document.getElementById('output').innerText = data; }
+      url: function() {
+      	prompt('Enter the URL:');
+        $("output").text("Loading...");
+      },
+      success: function(result) {
+        $("#output").text(result);
+      }
     });
   </script>
   </head>
   <body>
-    <p id="output">Loading...</p>
+    <p id="output">Please enter URL</p>
   </body>
 </html>
