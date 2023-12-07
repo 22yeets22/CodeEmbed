@@ -5,12 +5,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     $.ajax({
-      url: function() {
-      	var url = prompt('Enter the URL:');
-        $("output").text("Loading...");
-        return url;
-      },
-      success: function(result) {
+      url: (function () {
+	   	var u = prompt("Please enter URL:");
+        $("#output").text("Loading...");
+        return u;
+      })(),
+      success: function (result) {
         $("#output").text(result);
       }
     });
