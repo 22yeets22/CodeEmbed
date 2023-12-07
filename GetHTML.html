@@ -5,6 +5,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="https://bouncecss.bookie0.repl.co/bounce.css" rel="stylesheet" type="text/css" />
   <script>
+    function buttonClick() {
+      urlRequest(prompt('Enter your URL:'));
+    }
+
+    
   	function urlRequest(urlInput) {
       $.ajax({
         url: (function () {
@@ -21,7 +26,7 @@
   </head>
   <body>
     <div style="text-align: center;">
-      <button id="startbutt" onclick="urlRequest(prompt('Enter your URL:'));">Get HTML</button>
+      <button id="startbutt" onclick="buttonClick();">Get HTML</button>
       <p id="output"></p>
     </div>
   </body>
