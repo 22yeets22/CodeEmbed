@@ -6,8 +6,9 @@
   <script>
     $.ajax({
       url: function() {
-      	prompt('Enter the URL:');
+      	var url = prompt('Enter the URL:');
         $("output").text("Loading...");
+        return url;
       },
       success: function(result) {
         $("#output").text(result);
